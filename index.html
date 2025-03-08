@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Birthday Wish</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="darkroom">
+        <p class="bb-text1" id="msg1">Hey!</p>
+        <p class="bb-text1" id="msg2">Why is it so dark here?</p>
+        <p class="bb-text1" id="msg3">
+            <span class="name">Prachi</span>! Can you please switch on the lights?
+        </p>
+        <img src="img/bulb.svg" alt="Bulb" id="bulb" class="bulb">
+        <p class="bb-text2" id="click-msg">Click the Light Bulb.</p>
+    </div>
+
+    <!-- Full-screen bedroom image container -->
+    <div id="fullscreen-image" class="fullscreen-image">
+        <img src="img/freepik__expand__59530.png" alt="Bedroom" class="fullscreen-img">
+        <p class="bb-text3" id="msg4">Ok! Why is it so empty here?</p>
+        <p class="bb-text3" id="msg5">You know what, let's move outside.</p>
+        <p class="bb-text3" id="msg6">Let's see if anyone's over there...</p>
+        <img src="img/door.svg" alt="Door" id="door" class="door">
+        <p class="bb-text4" id="click-door-msg">Click the Door.</p>
+    </div>
+
+    <!-- Full-screen hallway image container -->
+    <div id="hallway-image" class="fullscreen-image">
+        <!-- Add any additional messages or elements here if needed -->
+        <img src="img/hallway.svg" alt="Hallway" class="fullscreen-img">
+        <p class="bb-text5" id="msg7">Hey!</p>
+        <p class="bb-text5" id="msg8">Maybe it's a bit late to move in the hallway.</p>
+        <p class="bb-text5" id="msg9">Things are creepy here...</p>
+        <p class="bb-text5" id="msg10">I think we should go back inside.</p>
+        <img src="img/door.svg" alt="Door" id="hallway-door" class="door">
+        <p class="bb-text6" id="click-hallway-door-msg">Click the Door.</p>
+    </div>
+
+    <!-- Full-screen hallway image container -->
+    <div id="bed-fullscreen-image" class="fullscreen-image">
+        <img src="img/freepik__expand__59530.png" alt="Bedroom" class="fullscreen-img">
+        <p class="bb-text7" id="msg11">Wow! That was something weird.</p>
+        <p class="bb-text7" id="msg12">Hey look! There's a gift for you..</p>
+        <p class="bb-text7" id="msg13">Prachi, let's open it and see what's in there!</p>
+        <img src="img/gift.svg" alt="Gift" id="gift" class="gift">
+        <p class="bb-text8" id="click-gift-msg">Click the gift.</p>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="background-music" loop>
+        <source src="sfx/haunted-bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="bulb-click-sound">
+        <source src="sfx/switch.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="door-open-sound">
+        <source src="sfx/door.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

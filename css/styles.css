@@ -1,0 +1,302 @@
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    text-align: center;
+    
+    letter-spacing: 1px; /* Letters ke beech mein space */
+    line-height: 1.5; /* Line height adjust karein */
+}
+
+/* Darkroom container */
+.darkroom {
+    position: relative; /* Make the container relative for absolute positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Message styles */
+.bb-text1 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: -150px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+/* Message styles */
+.bb-text2 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 100px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+
+/* Name styling */
+.name {
+    color: #ffcc00; /* Yellow color for the name */
+    font-weight: bold;
+}
+
+/* Bulb styles */
+/* Bulb styles */
+.bulb {
+    width: 150px;
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    top: -150px; /* Position above the center */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the bulb horizontally */
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out; /* Add transform transition */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+}
+
+/* Pulsation animation (applied only after bulb appears) */
+.bulb.pulsate {
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: translateX(-50%) scale(1); /* Original size */
+    }
+    50% {
+        transform: translateX(-50%) scale(0.9); /* Shrink to 90% size */
+    }
+    100% {
+        transform: translateX(-50%) scale(1); /* Back to original size */
+    }
+}
+
+/* Full-screen image styles (applies to both bedroom and hallway) */
+.fullscreen-image {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 3s ease-in-out; /* Gradual fade-in effect */
+}
+
+.fullscreen-image img.fullscreen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire screen without distortion */
+    opacity: 0.8; /* Maximum brightness 80% */
+}
+
+/* Message styles */
+.bb-text3 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 150px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+
+/* Message styles */
+.bb-text4 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: -100px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+
+}
+
+/* Door styles */
+.door {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the door precisely */
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1001; /* Ensure the door is above the bedroom image */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade-in */
+    animation: pulsate 1.5s infinite; /* Add pulsation animation */
+}
+
+/* Pulsation animation */
+@keyframes pulsate {
+    0% {
+        transform: translate(-50%, -50%) scale(1); /* Original size */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.9); /* Shrink to 90% size */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Back to original size */
+    }   
+}
+
+/* "Click the Door" message */
+#click-door-msg {
+    position: absolute;
+    top: calc(58% + 100px); /* Position below the door */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the message horizontally */
+    font-size: 1.5rem; /* Smaller font size */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade-in */
+}
+
+.bb-text5 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 150px; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+
+.bb-text6 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 550px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+
+}
+
+/* Gift styles */
+/* Message styles for bb-text7 */
+.bb-text7 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 150px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+
+/* Message styles for bb-text8 */
+.bb-text8 {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 500px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    white-space: nowrap; /* Prevent text from splitting into multiple lines */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    font-size: 2rem; /* Larger font size */
+}
+
+/* Gift styles */
+.gift {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the gift precisely */
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1001; /* Ensure the gift is above the image */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade-in */
+    animation: pulsate 1.5s infinite; /* Add pulsation animation */
+}
+
+/***********************/
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    .bb-text1, .bb-text2, .bb-text3, .bb-text4, .bb-text5, .bb-text6, .bb-text7, .bb-text8 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust bulb size */
+    .bulb {
+        width: 100px;
+        height: 200px;
+    }
+
+    /* Adjust door and gift sizes */
+    .door, .gift {
+        width: 80px;
+    }
+
+    /* Reposition messages for better visibility */
+    .bb-text1 { top: -100px; }
+    .bb-text2 { top: 80px; }
+    .bb-text3 { top: 120px; }
+    .bb-text4 { top: -80px; }
+    .bb-text5 { top: 120px; }
+    .bb-text6 { top: 400px; }
+    .bb-text7 { top: 120px; }
+    .bb-text8 { top: 350px; }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .bb-text1, .bb-text2, .bb-text3, .bb-text4, .bb-text5, .bb-text6, .bb-text7, .bb-text8 {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust bulb size */
+    .bulb {
+        width: 80px;
+        height: 160px;
+    }
+
+    /* Adjust door and gift sizes */
+    .door, .gift {
+        width: 60px;
+    }
+
+    /* Reposition messages for better visibility */
+    .bb-text1 { top: -80px; }
+    .bb-text2 { top: 60px; }
+    .bb-text3 { top: 100px; }
+    .bb-text4 { top: -60px; }
+    .bb-text5 { top: 100px; }
+    .bb-text6 { top: 300px; }
+    .bb-text7 { top: 100px; }
+    .bb-text8 { top: 250px; }
+}
